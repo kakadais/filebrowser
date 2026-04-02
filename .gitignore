@@ -39,4 +39,7 @@ default.nix
 Dockerfile.dev
 
 # Capsule docs for project analysis
-/docs
+/docs/*
+!/docs/info-rules.md
+!/docs/infos/
+!/docs/infos/info-*.md
