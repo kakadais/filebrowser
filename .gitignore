@@ -37,3 +37,6 @@ build/
 
 default.nix
 Dockerfile.dev
+
+# Capsule docs for project analysis
+/docs
