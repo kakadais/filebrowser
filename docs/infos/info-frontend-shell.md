@@ -12,6 +12,7 @@
 - Request cancelation => file view aborts stale fetches on route change or unmount and treats aborts as non-fatal state transitions.
 - JWT lifecycle => token parse updates cookie, localStorage, auth store, locale, and logout timer from token expiry.
 - Upload switching => client chooses tus only for supported blob uploads with server tus settings; all other creation paths use `/api/resources`.
+- Share prompt => share creation UI must expose optional custom-key input and surface backend conflict or validation failures without masking them.
 - Boot contract => frontend constants and TS types must stay aligned with `http/static.go` injected keys and backend JSON payload shapes.
 # @Perf_Scale
 - Code loading => editor and preview are async-loaded to reduce initial bundle cost for listing-centric sessions.
@@ -21,5 +22,6 @@
 - New boot key => update backend template injection, frontend constants, and relevant TS declarations together.
 - New route => define title key, auth or admin guard, and layout or error behavior in the same change set.
 - API payload change => update frontend types, adapters, and view assumptions before merging.
+- Share creation change => keep prompt fields, API body, and share URL builders aligned with backend key semantics.
 - Auth flow change => verify JSON auth, proxy auth, noauth, and custom logout interactions.
 - Upload UX change => keep frontend strategy switching aligned with backend resource and tus semantics.
