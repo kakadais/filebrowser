@@ -4,7 +4,7 @@ services:
     image: filebrowser:deploy-amd64
     restart: unless-stopped
     ports:
-      - "80:80"
+      - "5302:80"
     volumes:
       - ./data:/srv
       - ./config:/config
