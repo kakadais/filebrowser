@@ -38,6 +38,8 @@ build/
 default.nix
 Dockerfile.dev
 .docker-dev/
+/data/*
+!/data/.gitkeep
 
 # Capsule docs for project analysis
 /docs/*

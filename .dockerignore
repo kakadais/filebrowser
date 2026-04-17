@@ -6,3 +6,4 @@ frontend/dist
 filebrowser.db
 docs/index.md
 .docker-dev
+data

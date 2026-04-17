@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./:/srv
+      - ./data:/srv
       - ./.docker-dev/config:/config
       - ./.docker-dev/database:/database
     command:
