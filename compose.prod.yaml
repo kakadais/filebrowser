@@ -1,0 +1,14 @@
+services:
+  filebrowser:
+    container_name: filebrowser
+    image: filebrowser:deploy-amd64
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./data:/srv
+      - ./config:/config
+      - ./database:/database
+    command:
+      - --address=0.0.0.0
+      - --port=80

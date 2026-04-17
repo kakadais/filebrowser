@@ -38,6 +38,9 @@ build/
 default.nix
 Dockerfile.dev
 .docker-dev/
+/.artifacts/
+/config/
+/database/
 /data/*
 !/data/.gitkeep
 

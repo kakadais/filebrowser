@@ -7,3 +7,6 @@ filebrowser.db
 docs/index.md
 .docker-dev
 data
+.artifacts
+config
+database
