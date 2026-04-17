@@ -37,3 +37,12 @@ build/
 
 default.nix
 Dockerfile.dev
+.docker-dev/
+/data/*
+!/data/.gitkeep
+
+# Capsule docs for project analysis
+/docs/*
+!/docs/info-rules.md
+!/docs/infos/
+!/docs/infos/info-*.md
