@@ -1,20 +1,15 @@
-# Run using:
-#   docker compose up --build
-
 services:
   filebrowser:
     container_name: filebrowser
-    build:
-      dockerfile: Dockerfile
-      context: .
+    image: filebrowser/filebrowser:latest
     networks:
       - filebrowser
     ports:
-      - 8000:80
+      - 5302:80
     volumes:
-      - filebrowser:/flux/vault
+      - ${FB_DATA_DIR:-/home/ubuntu/data}:/srv
     environment:
-      - REDIS_CACHE_URL=redis://default:filebrowser@redis:6379 # Use rediss:// for ssl
+      - FB_REDIS_CACHE_URL=redis://default:filebrowser@redis:6379 # Use rediss:// for ssl
 
   redis:
     container_name: redis
@@ -31,7 +26,4 @@ services:
         redis-server --aclfile /tmp/users.acl
 
 networks:
-  filebrowser:
-
-volumes:
   filebrowser:
