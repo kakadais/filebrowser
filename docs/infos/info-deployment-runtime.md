@@ -6,7 +6,7 @@
 # @Invariants
 - Deployment image tag => uploaded image and compose file must agree on a stable local-only tag.
 - Compose startup => production deployment uses `image:` only and must not require `build:` on the remote host.
-- Persistent state => deployment directory keeps `data`, `config`, and `database` beside compose artifacts for in-place upgrades.
+- Persistent state => host file content defaults to `/home/ubuntu/data`; deployment directory keeps `config` and `database` beside compose artifacts for in-place upgrades.
 - Listener config => runtime command binds `--address=0.0.0.0` and `--port=80` unless an operator overrides the compose file.
 - Publish port policy => host-to-container publish port may differ from container port `80`; the tracked bundle may pin a reverse-proxy-facing host port.
 - Auth default => deployment compose must omit `--noauth`.

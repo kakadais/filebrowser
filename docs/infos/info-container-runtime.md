@@ -11,7 +11,7 @@
 - Runtime binary => any binary copied into the BusyBox runtime image must be Linux-compatible and runnable without missing libc dependencies.
 - Runtime paths => `/srv`, `/config`, and `/database` remain the canonical mounted paths for browsed files, config, and Bolt data.
 - Dev host mounts => compose-backed local development maps `[project_root]/data` to `/srv` and must not expose the repository root as user content.
-- Prod host mounts => deployable compose maps deployment-local `data`, `config`, and `database` directories onto `/srv`, `/config`, and `/database`.
+- Prod host mounts => deployable compose maps `${FB_DATA_DIR:-/home/ubuntu/data}` to `/srv` and deployment-local `config` and `database` to `/config` and `/database`.
 - Init flow => container startup must preserve `/config/settings.json` auto-seeding through existing init scripts.
 - Health behavior => runtime healthcheck continues to probe `/health` on configured address and port.
 - Dev compose UX => one `docker compose up --build` path should be sufficient on hosts without local Go installation.
